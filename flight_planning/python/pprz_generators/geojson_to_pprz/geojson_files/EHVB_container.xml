@@ -1,0 +1,696 @@
+<!DOCTYPE flight_plan SYSTEM "../flight_plan.dtd">
+
+<flight_plan alt="8" ground_alt="-2" lat0="52.16814925633647" lon0="4.412750490009785"  max_dist_from_home="500" name="MP2 flightplan" security_height="10">
+	<header>
+		#include "autopilot.h"
+		#include "modules/datalink/datalink.h"
+		#include "modules/radio_control/radio_control.h"
+		#include "modules/nav/waypoints.h"
+		#include "modules/mp2/mp2_control.h"
+	</header>
+	<waypoints>
+		<waypoint name="HOME" lat="52.16814925633647" lon="4.412750490009785"/>
+		<waypoint name="CLIMB" lat="52.16814925633647" lon="4.412750490009785"/>
+		<waypoint name="STDBY" lat="52.16814925633647" lon="4.412750490009785"/>
+		<waypoint name="TD" lat="52.16814925633647" lon="4.412750490009785"/>
+		<waypoint name="OWNPOS" lat="52.16814925633647" lon="4.412750490009785"/>
+		<waypoint name="SGF1" lon="4.410195350646973" lat="52.16858870757395"/>
+		<waypoint name="SGF2" lon="4.41148281097412" lat="52.16632498347942"/>
+		<waypoint name="SGF3" lon="4.417598247528076" lat="52.16789117696069"/>
+		<waypoint name="SGF4" lon="4.416096210479736" lat="52.1703390664337"/>
+		<waypoint name="HGF1" lon="4.40951943397522" lat="52.168740057112295"/>
+		<waypoint name="HGF2" lon="4.411128759384155" lat="52.1657985195095"/>
+		<waypoint name="HGF3" lon="4.4181883335113525" lat="52.167674018971624"/>
+		<waypoint name="HGF4" lon="4.416396617889403" lat="52.17074045481175"/>
+		<waypoint name="p1a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p2a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p3a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p4a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p5a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p6a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p7a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p8a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p9a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p10a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p11a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p12a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p13a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p14a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p15a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p16a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p17a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p18a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p19a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p20a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p21a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p22a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p23a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p24a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p25a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p26a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p27a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p28a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p29a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p30a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p31a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p32a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p33a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p34a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p35a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p36a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p37a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p38a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p39a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p40a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p41a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p42a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p43a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p44a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p45a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p46a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p47a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p48a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p49a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p50a" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p1b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p2b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p3b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p4b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p5b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p6b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p7b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p8b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p9b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p10b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p11b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p12b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p13b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p14b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p15b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p16b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p17b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p18b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p19b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p20b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p21b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p22b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p23b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p24b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p25b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p26b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p27b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p28b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p29b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p30b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p31b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p32b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p33b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p34b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p35b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p36b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p37b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p38b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p39b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p40b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p41b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p42b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p43b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p44b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p45b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p46b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p47b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p48b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p49b" lat="52.16747660169823" lon="4.41500186920166"/>
+		<waypoint name="p50b" lat="52.16747660169823" lon="4.41500186920166"/>
+	</waypoints>
+	<sectors>
+		<sector color="yellow" name="SoftGeofence">
+			<corner name="SGF1"/>
+			<corner name="SGF2"/>
+			<corner name="SGF3"/>
+			<corner name="SGF4"/>
+		</sector>
+		<sector color="red" name="HardGeofence">
+			<corner name="HGF1"/>
+			<corner name="HGF2"/>
+			<corner name="HGF3"/>
+			<corner name="HGF4"/>
+		</sector>
+	</sectors>
+	<exceptions>
+		<!-- Geofence -->
+		<exception cond="Or(!InsideHardGeofence(GetPosX(), GetPosY()), GetPosAlt() @GT GetAltRef() + 80) @AND !(nav_block == IndexOfBlock('Wait GPS')) @AND !(nav_block == IndexOfBlock('Geo init')) @AND !(nav_block == IndexOfBlock('Holding point'))" deroute="Holding point"/>
+		<exception cond="Or(!InsideSoftGeofence(GetPosX(), GetPosY()), GetPosAlt() @GT GetAltRef() + 70) @AND !(nav_block == IndexOfBlock('Wait GPS')) @AND !(nav_block == IndexOfBlock('Geo init')) @AND !(nav_block == IndexOfBlock('Holding point'))" deroute="Standby"/>
+		
+		<!-- Datalink loss -->
+		<exception cond="(datalink_time @GT 60 @AND
+		    !(datalink_time @GT 120) @AND
+		    !(IndexOfBlock('Takeoff') @GT nav_block) @AND
+		    !(nav_block >= IndexOfBlock('land here')) @AND
+		    (autopilot_in_flight() == true) )" deroute="land here"/>
+	</exceptions>
+	<blocks>
+		
+		<block name="Wait GPS">
+		    <call_once fun="NavKillThrottle()"/>
+		    <while cond="!GpsFixValid()"/>
+		</block>
+		<block name="Geo init">
+		    <while cond="LessThan(NavBlockTime(), 30)"/>
+		</block>
+		<block name="Holding point">
+		    <call_once fun="NavKillThrottle()"/>
+		    <call_once fun="ins_ekf2_nav_init()"/>
+		    <attitude pitch="0" roll="0" throttle="0" until="FALSE" vmode="throttle"/>
+		</block>
+		<block name="Start Engine">
+		    <call_once fun="NavResurrect()"/>
+		    <attitude pitch="0" roll="0" throttle="0" until="stage_time>5" vmode="throttle"/>
+		</block>
+		<block name="Takeoff" strip_button="Takeoff" strip_icon="takeoff.png">
+		    <exception cond="GetPosHeight() @GT 2.0" deroute="Standby"/>
+		    <call_once fun="NavSetWaypointHere(WP_CLIMB)"/>
+		    <stay climb="nav_climb_vspeed" vmode="climb" wp="CLIMB"/>
+		</block>
+		<block name="Standby" strip_button="Standby" strip_icon="home.png">
+		    <stay wp="STDBY"/>
+		</block>
+		<block name="land here" strip_button="Land Here" strip_icon="land-right.png">
+		    <call_once fun="NavSetWaypointHere(WP_TD)"/>
+		</block>
+		<block name="land">
+		    <go wp="TD"/>
+		</block>
+		<block name="flare">
+		    <exception cond="NavDetectGround()" deroute="Holding point"/>
+		    <exception cond="!nav_is_in_flight()" deroute="landed"/>
+		    <call_once fun="NavStartDetectGround()"/>
+		    <stay climb="nav_descend_vspeed" vmode="climb" wp="TD"/>
+		</block>
+		<block name="landed">
+		    <attitude pitch="0" roll="0" throttle="0" until="FALSE" vmode="throttle"/>
+		</block>
+		<block name="line1a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="waypoint_set_here(WP_OWNPOS)"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="OWNPOS" hmode="route" wp="p1a"/>
+		</block>
+		<block name="line2a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p1a" hmode="route" wp="p2a"/>
+		</block>
+		<block name="line3a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p2a" hmode="route" wp="p3a"/>
+		</block>
+		<block name="line4a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p3a" hmode="route" wp="p4a"/>
+		</block>
+		<block name="line5a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p4a" hmode="route" wp="p5a"/>
+		</block>
+		<block name="line6a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p5a" hmode="route" wp="p6a"/>
+		</block>
+		<block name="line7a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p6a" hmode="route" wp="p7a"/>
+		</block>
+		<block name="line8a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p7a" hmode="route" wp="p8a"/>
+		</block>
+		<block name="line9a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p8a" hmode="route" wp="p9a"/>
+		</block>
+		<block name="line10a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p9a" hmode="route" wp="p10a"/>
+		</block>
+		<block name="line11a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p10a" hmode="route" wp="p11a"/>
+		</block>
+		<block name="line12a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p11a" hmode="route" wp="p12a"/>
+		</block>
+		<block name="line13a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p12a" hmode="route" wp="p13a"/>
+		</block>
+		<block name="line14a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p13a" hmode="route" wp="p14a"/>
+		</block>
+		<block name="line15a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p14a" hmode="route" wp="p15a"/>
+		</block>
+		<block name="line16a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p15a" hmode="route" wp="p16a"/>
+		</block>
+		<block name="line17a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p16a" hmode="route" wp="p17a"/>
+		</block>
+		<block name="line18a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p17a" hmode="route" wp="p18a"/>
+		</block>
+		<block name="line19a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p18a" hmode="route" wp="p19a"/>
+		</block>
+		<block name="line20a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p19a" hmode="route" wp="p20a"/>
+		</block>
+		<block name="line21a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p20a" hmode="route" wp="p21a"/>
+		</block>
+		<block name="line22a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p21a" hmode="route" wp="p22a"/>
+		</block>
+		<block name="line23a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p22a" hmode="route" wp="p23a"/>
+		</block>
+		<block name="line24a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p23a" hmode="route" wp="p24a"/>
+		</block>
+		<block name="line25a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p24a" hmode="route" wp="p25a"/>
+		</block>
+		<block name="line26a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p25a" hmode="route" wp="p26a"/>
+		</block>
+		<block name="line27a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p26a" hmode="route" wp="p27a"/>
+		</block>
+		<block name="line28a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p27a" hmode="route" wp="p28a"/>
+		</block>
+		<block name="line29a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p28a" hmode="route" wp="p29a"/>
+		</block>
+		<block name="line30a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p29a" hmode="route" wp="p30a"/>
+		</block>
+		<block name="line31a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p30a" hmode="route" wp="p31a"/>
+		</block>
+		<block name="line32a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p31a" hmode="route" wp="p32a"/>
+		</block>
+		<block name="line33a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p32a" hmode="route" wp="p33a"/>
+		</block>
+		<block name="line34a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p33a" hmode="route" wp="p34a"/>
+		</block>
+		<block name="line35a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p34a" hmode="route" wp="p35a"/>
+		</block>
+		<block name="line36a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p35a" hmode="route" wp="p36a"/>
+		</block>
+		<block name="line37a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p36a" hmode="route" wp="p37a"/>
+		</block>
+		<block name="line38a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p37a" hmode="route" wp="p38a"/>
+		</block>
+		<block name="line39a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p38a" hmode="route" wp="p39a"/>
+		</block>
+		<block name="line40a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p39a" hmode="route" wp="p40a"/>
+		</block>
+		<block name="line41a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p40a" hmode="route" wp="p41a"/>
+		</block>
+		<block name="line42a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p41a" hmode="route" wp="p42a"/>
+		</block>
+		<block name="line43a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p42a" hmode="route" wp="p43a"/>
+		</block>
+		<block name="line44a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p43a" hmode="route" wp="p44a"/>
+		</block>
+		<block name="line45a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p44a" hmode="route" wp="p45a"/>
+		</block>
+		<block name="line46a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p45a" hmode="route" wp="p46a"/>
+		</block>
+		<block name="line47a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p46a" hmode="route" wp="p47a"/>
+		</block>
+		<block name="line48a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p47a" hmode="route" wp="p48a"/>
+		</block>
+		<block name="line49a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p48a" hmode="route" wp="p49a"/>
+		</block>
+		<block name="line50a">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p49a" hmode="route" wp="p50a"/>
+		</block>
+		<block name="line1b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="waypoint_set_here(WP_OWNPOS)"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="OWNPOS" hmode="route" wp="p1b"/>
+		</block>
+		<block name="line2b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p1b" hmode="route" wp="p2b"/>
+		</block>
+		<block name="line3b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p2b" hmode="route" wp="p3b"/>
+		</block>
+		<block name="line4b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p3b" hmode="route" wp="p4b"/>
+		</block>
+		<block name="line5b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p4b" hmode="route" wp="p5b"/>
+		</block>
+		<block name="line6b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p5b" hmode="route" wp="p6b"/>
+		</block>
+		<block name="line7b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p6b" hmode="route" wp="p7b"/>
+		</block>
+		<block name="line8b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p7b" hmode="route" wp="p8b"/>
+		</block>
+		<block name="line9b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p8b" hmode="route" wp="p9b"/>
+		</block>
+		<block name="line10b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p9b" hmode="route" wp="p10b"/>
+		</block>
+		<block name="line11b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p10b" hmode="route" wp="p11b"/>
+		</block>
+		<block name="line12b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p11b" hmode="route" wp="p12b"/>
+		</block>
+		<block name="line13b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p12b" hmode="route" wp="p13b"/>
+		</block>
+		<block name="line14b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p13b" hmode="route" wp="p14b"/>
+		</block>
+		<block name="line15b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p14b" hmode="route" wp="p15b"/>
+		</block>
+		<block name="line16b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p15b" hmode="route" wp="p16b"/>
+		</block>
+		<block name="line17b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p16b" hmode="route" wp="p17b"/>
+		</block>
+		<block name="line18b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p17b" hmode="route" wp="p18b"/>
+		</block>
+		<block name="line19b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p18b" hmode="route" wp="p19b"/>
+		</block>
+		<block name="line20b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p19b" hmode="route" wp="p20b"/>
+		</block>
+		<block name="line21b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p20b" hmode="route" wp="p21b"/>
+		</block>
+		<block name="line22b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p21b" hmode="route" wp="p22b"/>
+		</block>
+		<block name="line23b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p22b" hmode="route" wp="p23b"/>
+		</block>
+		<block name="line24b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p23b" hmode="route" wp="p24b"/>
+		</block>
+		<block name="line25b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p24b" hmode="route" wp="p25b"/>
+		</block>
+		<block name="line26b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p25b" hmode="route" wp="p26b"/>
+		</block>
+		<block name="line27b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p26b" hmode="route" wp="p27b"/>
+		</block>
+		<block name="line28b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p27b" hmode="route" wp="p28b"/>
+		</block>
+		<block name="line29b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p28b" hmode="route" wp="p29b"/>
+		</block>
+		<block name="line30b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p29b" hmode="route" wp="p30b"/>
+		</block>
+		<block name="line31b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p30b" hmode="route" wp="p31b"/>
+		</block>
+		<block name="line32b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p31b" hmode="route" wp="p32b"/>
+		</block>
+		<block name="line33b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p32b" hmode="route" wp="p33b"/>
+		</block>
+		<block name="line34b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p33b" hmode="route" wp="p34b"/>
+		</block>
+		<block name="line35b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p34b" hmode="route" wp="p35b"/>
+		</block>
+		<block name="line36b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p35b" hmode="route" wp="p36b"/>
+		</block>
+		<block name="line37b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p36b" hmode="route" wp="p37b"/>
+		</block>
+		<block name="line38b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p37b" hmode="route" wp="p38b"/>
+		</block>
+		<block name="line39b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p38b" hmode="route" wp="p39b"/>
+		</block>
+		<block name="line40b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p39b" hmode="route" wp="p40b"/>
+		</block>
+		<block name="line41b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p40b" hmode="route" wp="p41b"/>
+		</block>
+		<block name="line42b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p41b" hmode="route" wp="p42b"/>
+		</block>
+		<block name="line43b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p42b" hmode="route" wp="p43b"/>
+		</block>
+		<block name="line44b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p43b" hmode="route" wp="p44b"/>
+		</block>
+		<block name="line45b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p44b" hmode="route" wp="p45b"/>
+		</block>
+		<block name="line46b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p45b" hmode="route" wp="p46b"/>
+		</block>
+		<block name="line47b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p46b" hmode="route" wp="p47b"/>
+		</block>
+		<block name="line48b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p47b" hmode="route" wp="p48b"/>
+		</block>
+		<block name="line49b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p48b" hmode="route" wp="p49b"/>
+		</block>
+		<block name="line50b">
+			<exception cond="mp2_finished_fp()" deroute="land"/>
+			<call_once fun="mp2_set_airspeed()"/>
+			<go from="p49b" hmode="route" wp="p50b"/>
+		</block>
+	</blocks>
+</flight_plan>

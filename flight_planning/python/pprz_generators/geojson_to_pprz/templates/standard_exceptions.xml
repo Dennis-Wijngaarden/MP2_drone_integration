@@ -1,0 +1,10 @@
+<!-- Geofence -->
+<exception cond="Or(!InsideHardGeofence(GetPosX(), GetPosY()), GetPosAlt() @GT GetAltRef() + 80) @AND !(nav_block == IndexOfBlock('Wait GPS')) @AND !(nav_block == IndexOfBlock('Geo init')) @AND !(nav_block == IndexOfBlock('Holding point'))" deroute="Holding point"/>
+<exception cond="Or(!InsideSoftGeofence(GetPosX(), GetPosY()), GetPosAlt() @GT GetAltRef() + 70) @AND !(nav_block == IndexOfBlock('Wait GPS')) @AND !(nav_block == IndexOfBlock('Geo init')) @AND !(nav_block == IndexOfBlock('Holding point'))" deroute="Standby"/>
+
+<!-- Datalink loss -->
+<exception cond="(datalink_time @GT 60 @AND
+    !(datalink_time @GT 120) @AND
+    !(IndexOfBlock('Takeoff') @GT nav_block) @AND
+    !(nav_block >= IndexOfBlock('land here')) @AND
+    (autopilot_in_flight() == true) )" deroute="land here"/>

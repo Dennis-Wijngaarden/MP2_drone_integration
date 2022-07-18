@@ -1,0 +1,113 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "stroke": "#555555",
+          "stroke-width": 2,
+          "stroke-opacity": 1,
+          "fill": "#555555",
+          "fill-opacity": 0.5,
+          "name": "SOFT_GF"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                4.410195350646973,
+                52.16858870757395
+              ],
+              [
+                4.41148281097412,
+                52.16632498347942
+              ],
+              [
+                4.417598247528076,
+                52.16789117696069
+              ],
+              [
+                4.416096210479736,
+                52.1703390664337
+              ],
+              [
+                4.410195350646973,
+                52.16858870757395
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "stroke": "#555555",
+          "stroke-width": 2,
+          "stroke-opacity": 1,
+          "fill": "#555555",
+          "fill-opacity": 0.5,
+          "name": "HARD_GF"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                4.40951943397522,
+                52.168740057112295
+              ],
+              [
+                4.411128759384155,
+                52.1657985195095
+              ],
+              [
+                4.4181883335113525,
+                52.167674018971624
+              ],
+              [
+                4.416396617889403,
+                52.17074045481175
+              ],
+              [
+                4.40951943397522,
+                52.168740057112295
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7e7e7e",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "name": "HOME"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            4.412750490009785,
+            52.16814925633647
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7e7e7e",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "name": "BUF"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            4.41500186920166,
+            52.16747660169823
+          ]
+        }
+      }
+    ]
+  }
