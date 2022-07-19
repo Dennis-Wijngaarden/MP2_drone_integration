@@ -163,6 +163,20 @@
 		    <call_once fun="ins_ekf2_nav_init()"/>
 		    <attitude pitch="0" roll="0" throttle="0" until="FALSE" vmode="throttle"/>
 		</block>
+		<bloack name="Wait for takeoff command"/>
+		    <call_once fun="NavKillThrottle()"/>
+		    <attitude pitch="0" roll="0" throttle="0" until="FALSE" vmode="throttle"/>
+		</block>
+		<block name="Start Engine_MP2">
+		    <call_once fun="NavResurrect()"/>
+		    <attitude pitch="0" roll="0" throttle="0" until="stage_time>5" vmode="throttle"/>
+		</block>
+		<block name="Takeoff_MP2" strip_button="Takeoff" strip_icon="takeoff.png">
+		    <exception cond="And(GetPosHeight() @GT 2.0, c2c_a_active())" deroute="line1a"/>
+		    <exception cond="And(GetPosHeight() @GT 2.0, !c2c_a_active())" deroute="line1b"/>
+		    <call_once fun="NavSetWaypointHere(WP_CLIMB)"/>
+		    <stay climb="nav_climb_vspeed" vmode="climb" wp="CLIMB"/>
+		</block>
 		<block name="Start Engine">
 		    <call_once fun="NavResurrect()"/>
 		    <attitude pitch="0" roll="0" throttle="0" until="stage_time>5" vmode="throttle"/>

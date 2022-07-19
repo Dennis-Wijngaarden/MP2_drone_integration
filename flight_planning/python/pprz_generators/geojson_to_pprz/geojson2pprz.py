@@ -244,6 +244,7 @@ class PprzFP(object):
     
     def generate_mp2_blocks_xml(self):
         blocks_xml = ''
+
         blocks_xml += '\t\t<block name="line1a">\n'
         blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
         blocks_xml += '\t\t\t<call_once fun="waypoint_set_here(WP_OWNPOS)"/>\n'
