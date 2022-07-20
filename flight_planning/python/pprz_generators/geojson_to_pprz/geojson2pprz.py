@@ -70,6 +70,7 @@ class PprzFP(object):
         self.fp_xml += '\t\t<waypoint name="OWNPOS" lat="' + str(self.home_lat_lon[0]) + '" lon="' + str(self.home_lat_lon[1]) + '"/>\n'
         self.fp_xml += self.soft_gf_wp
         self.fp_xml += self.hard_gf_wp
+        self.fp_xml += '\t\t<waypoint name="p1" lat="' + str(self.home_lat_lon[0]) + '" lon="' + str(self.home_lat_lon[1]) + '"/>\n'
 
         for i in range(self.N):
             self.fp_xml += '\t\t<waypoint name="p' + str(i+1) + 'a" lat="' + str(self.buf_lat_lon[0]) + '" lon="' + str(self.buf_lat_lon[1]) + '"/>\n'
@@ -245,10 +246,22 @@ class PprzFP(object):
     def generate_mp2_blocks_xml(self):
         blocks_xml = ''
 
+        blocks_xml += '\t\t<block name="hold">\n'
+        blocks_xml += '\t\t\t<call_once fun="waypoint_set_here(WP_OWNPOS)"/>\n'
+        blocks_xml += '\t\t\t<stay wp="OWNPOS"/>\n'
+        blocks_xml += '\t\t</block>\n'
+
+        blocks_xml += '\t\t<block name="stay_p1">\n'
+        blocks_xml += '\t\t\t<exception cond="And(mp2_get_fp_activated(), mp2_a_active())" deroute="line1a"/>'
+        blocks_xml += '\t\t\t<exception cond="And(mp2_get_fp_activated(), !mp2_a_active())" deroute="line1b"/>'
+        blocks_xml += '\t\t\t<stay wp="p1"/>\n'
+        blocks_xml += '\t\t</block>\n'
+
         blocks_xml += '\t\t<block name="line1a">\n'
         blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
         blocks_xml += '\t\t\t<call_once fun="waypoint_set_here(WP_OWNPOS)"/>\n'
         blocks_xml += '\t\t\t<call_once fun="mp2_set_airspeed()"/>\n'
+        blocks_xml += '\t\t\t<call_once fun="mp2_update_active_wp_id()"/>\n'
         blocks_xml += '\t\t\t<go from="OWNPOS" hmode="route" wp="p1a"/>\n'
         blocks_xml += '\t\t</block>\n'
 
@@ -256,6 +269,7 @@ class PprzFP(object):
             blocks_xml += '\t\t<block name="line' + str(i+2) + 'a">\n'
             blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
             blocks_xml += '\t\t\t<call_once fun="mp2_set_airspeed()"/>\n'
+            blocks_xml += '\t\t\t<call_once fun="mp2_update_active_wp_id()"/>\n'
             blocks_xml += '\t\t\t<go from="p' + str(i+1) + 'a" hmode="route" wp="p' + str(i+2) + 'a"/>\n'
             blocks_xml += '\t\t</block>\n'
 
@@ -263,6 +277,7 @@ class PprzFP(object):
         blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
         blocks_xml += '\t\t\t<call_once fun="waypoint_set_here(WP_OWNPOS)"/>\n'
         blocks_xml += '\t\t\t<call_once fun="mp2_set_airspeed()"/>\n'
+        blocks_xml += '\t\t\t<call_once fun="mp2_update_active_wp_id()"/>\n'
         blocks_xml += '\t\t\t<go from="OWNPOS" hmode="route" wp="p1b"/>\n'
         blocks_xml += '\t\t</block>\n'
 
@@ -270,6 +285,7 @@ class PprzFP(object):
             blocks_xml += '\t\t<block name="line' + str(i+2) + 'b">\n'
             blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
             blocks_xml += '\t\t\t<call_once fun="mp2_set_airspeed()"/>\n'
+            blocks_xml += '\t\t\t<call_once fun="mp2_update_active_wp_id()"/>\n'
             blocks_xml += '\t\t\t<go from="p' + str(i+1) + 'b" hmode="route" wp="p' + str(i+2) + 'b"/>\n'
             blocks_xml += '\t\t</block>\n'
             
