@@ -28,7 +28,7 @@ class TestSend(object):
     def send_cmd(self):
 
         cmd_dict = {}
-        cmd_dict['Command'] = 'Execute Flight Plan'
+        cmd_dict['Command'] = 'ExecuteFlightPlan'
 
         self.mqtt_client.publish('control/command/13', json.dumps(cmd_dict))
         sleep(1)
