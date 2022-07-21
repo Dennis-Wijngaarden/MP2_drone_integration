@@ -21,9 +21,8 @@
 </block>
 <block name="Takeoff_MP2" strip_button="Takeoff" strip_icon="takeoff.png">
     <exception cond="GetPosHeight() @GT 2.0" deroute="stay_p1"/>
-    <!--<exception cond="And(GetPosHeight() @GT 2.0, mp2_a_active())" deroute="line1a"/>
-    <exception cond="And(GetPosHeight() @GT 2.0, !mp2_a_active())" deroute="line1b"/>-->
     <call_once fun="NavSetWaypointHere(WP_CLIMB)"/>
+    <call_once fun="NavSetWaypointHere(WP_TD)"/>
     <stay climb="nav_climb_vspeed" vmode="climb" wp="CLIMB"/>
 </block>
 <block name="Start Engine">
@@ -33,6 +32,7 @@
 <block name="Takeoff" strip_button="Takeoff" strip_icon="takeoff.png">
     <exception cond="GetPosHeight() @GT 2.0" deroute="Standby"/>
     <call_once fun="NavSetWaypointHere(WP_CLIMB)"/>
+    <call_once fun="NavSetWaypointHere(WP_TD)"/>
     <stay climb="nav_climb_vspeed" vmode="climb" wp="CLIMB"/>
 </block>
 <block name="Standby" strip_button="Standby" strip_icon="home.png">
@@ -42,6 +42,7 @@
     <call_once fun="NavSetWaypointHere(WP_TD)"/>
 </block>
 <block name="land">
+    <call_once fun="waypoint_set_alt(WP_TD, GetPosHeight())"/>
     <go wp="TD"/>
 </block>
 <block name="flare">

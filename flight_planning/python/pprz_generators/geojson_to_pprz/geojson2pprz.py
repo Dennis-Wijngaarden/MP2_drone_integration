@@ -258,7 +258,7 @@ class PprzFP(object):
         blocks_xml += '\t\t</block>\n'
 
         blocks_xml += '\t\t<block name="line1a">\n'
-        blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
+        blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="hold"/>\n'
         blocks_xml += '\t\t\t<call_once fun="waypoint_set_here(WP_OWNPOS)"/>\n'
         blocks_xml += '\t\t\t<call_once fun="mp2_set_airspeed()"/>\n'
         blocks_xml += '\t\t\t<call_once fun="mp2_update_active_wp_id()"/>\n'
@@ -267,14 +267,14 @@ class PprzFP(object):
 
         for i in range(self.N-1):
             blocks_xml += '\t\t<block name="line' + str(i+2) + 'a">\n'
-            blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
+            blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="hold"/>\n'
             blocks_xml += '\t\t\t<call_once fun="mp2_set_airspeed()"/>\n'
             blocks_xml += '\t\t\t<call_once fun="mp2_update_active_wp_id()"/>\n'
             blocks_xml += '\t\t\t<go from="p' + str(i+1) + 'a" hmode="route" wp="p' + str(i+2) + 'a"/>\n'
             blocks_xml += '\t\t</block>\n'
 
         blocks_xml += '\t\t<block name="line1b">\n'
-        blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
+        blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="hold"/>\n'
         blocks_xml += '\t\t\t<call_once fun="waypoint_set_here(WP_OWNPOS)"/>\n'
         blocks_xml += '\t\t\t<call_once fun="mp2_set_airspeed()"/>\n'
         blocks_xml += '\t\t\t<call_once fun="mp2_update_active_wp_id()"/>\n'
@@ -283,7 +283,7 @@ class PprzFP(object):
 
         for i in range(self.N-1):
             blocks_xml += '\t\t<block name="line' + str(i+2) + 'b">\n'
-            blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="land"/>\n'
+            blocks_xml += '\t\t\t<exception cond="mp2_finished_fp()" deroute="hold"/>\n'
             blocks_xml += '\t\t\t<call_once fun="mp2_set_airspeed()"/>\n'
             blocks_xml += '\t\t\t<call_once fun="mp2_update_active_wp_id()"/>\n'
             blocks_xml += '\t\t\t<go from="p' + str(i+1) + 'b" hmode="route" wp="p' + str(i+2) + 'b"/>\n'
